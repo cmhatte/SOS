@@ -2,21 +2,21 @@
 
 function sos_register_post_type() {
 
-	$singuar = 'Candidate';
+	$singular = 'Candidate';
 	$plural = 'Candidates';
 
 	$labels = array(
 		'name'					=> $plural,
-		'singular_name'	=> $singuar,
+		'singular_name'	=> $singular,
 		'add_name'			=> 'Add New',
-		'add_new_item'	=> 'Add New ' . $singuar,
+		'add_new_item'	=> 'Add New ' . $singular,
 		'edit'					=> 'Edit',
 		'edit_item'			=> 'Edit ' . $singular,
-		'new_item'			=> 'New ' . $singuar,
+		'new_item'			=> 'New ' . $singular,
 		'view'					=> 'View ' . $singular,
-		'view_item'			=> 'View ' . $singuar,
+		'view_item'			=> 'View ' . $singular,
 		'search_term'		=> 'Search ' . $plural,
-		'parent'				=> 'Parent ' . $singuar,
+		'parent'				=> 'Parent ' . $singular,
 		'not_found'			=> 'No ' . $plural . ' found',
 		'not_found_in_trash'	=> 'No ' . $plural . ' in Trash'
 	);
