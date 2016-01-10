@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              http://lostwebdesigns.com
- * @since             1.0.0
+ * @since             0.0.1
  * @package           Sos_Cleanup
  *
  * @wordpress-plugin
  * Plugin Name:       SOS Cleanup and Base Functions
  * Plugin URI:        https://github.com/g-kanoufi/wp-cleanup-and-base-functions
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Description:       Head section cleanup and many usual custom settings used on every website setup as images settings, privacy and basic admin customization.
+ * Version:           0.0.1
  * Author:            Guilaume Kanoufi
  * Author URI:        http://lostwebdesigns.com
  * License:           GPL-2.0+
