@@ -28,5 +28,5 @@ get_header(); ?>
         <div class="clear"></div>
     </div><!-- site-aligner -->
 </div><!-- content -->
-	
+
 <?php get_footer(); ?>

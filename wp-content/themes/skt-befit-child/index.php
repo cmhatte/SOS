@@ -10,12 +10,12 @@
  * @package SKT BeFit
  */
 
-get_header(); 
+get_header();
 ?>
 
 <?php if ( 'page' == get_option( 'show_on_front' ) && ( '' != get_option( 'page_for_posts' ) ) && $wp_query->get_queried_object_id() == get_option( 'page_for_posts' ) ) : ?>
 
-<div id="content">
+<div id="content">test
     <div class="site-aligner">
         <section class="site-main content-left" id="sitemain">
         	 <div class="blog-post">
@@ -29,7 +29,7 @@ get_header();
                              * (where ___ is the post format) and that will be used instead.
                              */
                             get_template_part( 'content', get_post_format() );
-                    
+
                         endwhile;
                         // Previous/next post navigation.
                         	the_posts_pagination( array(
@@ -37,11 +37,11 @@ get_header();
 							'prev_text' => __( 'Back', 'skt-befit' ),
 							'next_text' => __( 'Onward', 'skt-befit' ),
 						) );
-                    
+
                     else :
                         // If no content, include the "No posts found" template.
                          get_template_part( 'no-results', 'index' );
-                    
+
                     endif;
                     ?>
                     </div><!-- blog-post -->
@@ -88,7 +88,7 @@ get_header();
 						'prev_text' => __( 'Back', 'skt-befit' ),
 						'next_text' => __( 'Onward', 'skt-befit' ),
 						) ); ?>
-            </div>                    
+            </div>
         </div><div class="clear"></div>
     </section>
 <?php endif; ?>

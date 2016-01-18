@@ -201,7 +201,7 @@ endwhile;
 </section>
 <style>
 	#home_slider {
-		margin-bottom:80px;
+		margin-bottom:-14px;
 	}
 </style>
 <section id="home_slider" style="top:-190px; color:#FFF;">
@@ -268,49 +268,11 @@ endwhile;
 	/* } */
 ?>
 
-
-<style>
-	.my-top-matches {
-		clear:both;
-		background-color:#F47135;
-		color: #FFF;
-		font-family: "Times New Roman";
-		margin-left: 2%;
-		margin-right: 2%;
-		padding: 10px 20px;
-		float:left;
-		width:350px;
-		height:200px;
-		text-align: center;
-	}
-	.top-trending {
-		float:left;
-		background-color:#FFF;
-		color:#000;
-		font-family: "Times New Roman";
-		margin-left: 2%;
-		padding: 10px 10px;
-		width: 350px;
-		height: 300px;
-		text-align: center;
-		border: 1px solid #777;
-	}
-		.top-trending-box {
-			background-color: #F47135;
-			font-size: 12px;
-			color: #FFF;
-			width:150px;
-			height:190px;
-			float: left;
-			margin-right:1%;
-		}
-</style>
-
-<div class="my-top-matches">
+<!-- <div class="my-top-matches">
 	<h3>MY TOP MATCHES</h3>
 </div>
-
-<div class="top-trending">
+ -->
+<!-- <div class="top-trending">
 	<h3>TRENDING</h3>
 	<div class="top-trending-box">
 		<img src="" width="150">
@@ -323,7 +285,7 @@ endwhile;
 		<p>&#9650; 15% &#9660;</p>
 	</div>
 </div>
-
+ -->
 <style>
 	.feature-box-main {
 		margin-top: 235px;
@@ -332,7 +294,7 @@ endwhile;
 
 </style>
 
-
+<?php /* ?>
 <div class="feature-box-main site-aligner">
   <?php
 	  for($tbx=1; $tbx<5; $tbx++) {
@@ -366,7 +328,7 @@ endwhile;
 }
 ?>
   <div class="clear"></div>
-</div>
+</div><?php */ ?>
 <?php
 }
 elseif ( is_home() ) {

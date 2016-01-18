@@ -5,8 +5,13 @@
  * @package SKT BeFit
  */
 
-// Set the word limit of post content 
+// echo '<pre>';
+// $debug = new R_DEBUG();
 
+// var_export( $debug );
+// echo '</pre>'; //die;
+
+// Set the word limit of post content
 function sktbefit_content($limit) {
 $content = explode(' ', get_the_content(), $limit);
 if (count($content)>=$limit) {
@@ -14,8 +19,8 @@ array_pop($content);
 $content = implode(" ",$content).'...';
 } else {
 $content = implode(" ",$content);
-}	
-$content = preg_replace("/<img[^>]+\>/i", " ", $content); 
+}
+$content = preg_replace("/<img[^>]+\>/i", " ", $content);
 $content = preg_replace('/\[.+\]/','', $content);
 $content = apply_filters('the_content', $content);
 $content = str_replace(']]>', ']]&gt;', $content);
@@ -48,12 +53,12 @@ function sktbefit_setup() {
 	register_nav_menus( array(
 		'primary' => esc_attr__( 'Primary Menu', 'skt-befit' ),
 	) );
-	
+
 	add_theme_support( 'custom-background', array(
 		'default-color' => '111111'
 	) );
 	add_editor_style( 'editor-style.css' );
-	
+
 }
 endif; // sktbefit_setup
 add_action( 'after_setup_theme', 'sktbefit_setup' );
@@ -69,7 +74,7 @@ function sktbefit_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
-	
+
 	register_sidebar( array(
 		'name'          => esc_attr__( 'Twitter Widget', 'skt-befit' ),
 		'description'   => esc_attr__( 'Appears on footer of the page', 'skt-befit' ),
@@ -79,45 +84,45 @@ function sktbefit_widgets_init() {
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );
-	
-	
+
+
 }
 add_action( 'widgets_init', 'sktbefit_widgets_init' );
 
 
 function sktbefit_font_url(){
 		$font_url = '';
-		
+
 		/* Translators: If there are any character that are
 		* not supported by Roboto, translate this to off, do not
 		* translate into your own language.
 		*/
 		$roboto = _x('on', 'Roboto font:on or off','skt-befit');
-		
+
 		/* Translators: If there are any character that are not
 		* supported by Oswald, trsnalate this to off, do not
 		* translate into your own language.
 		*/
 		$oswald = _x('on','Oswald:on or off','skt-befit');
-		
-		/* Translators: If there has any character that are not supported 
+
+		/* Translators: If there has any character that are not supported
 		*  by Scada, translate this to off, do not translate
 		*  into your own language.
 		*/
 		$scada = _x('on','Scada:on or off','skt-befit');
-		
-		
+
+
 		$sail = _x('on','Sail:on or off','skt-befit');
-		
+
 		$robotocondensed = _x('on','Roboto Condensed:on or off','skt-befit');
-		
+
 		$pacifico = _x('on','Pacifico:on or off','skt-befit');
-		
+
 		$opensans = _x('on','Open Sans:on or off','skt-befit');
-		
+
 		if('off' !== $roboto || 'off' !== $oswald){
 			$font_family = array();
-			
+
 			if('off' !== $roboto){
 				$font_family[] = 'Roboto:300,400,600,700,800,900';
 			}
@@ -132,17 +137,17 @@ function sktbefit_font_url(){
 			}
 			if('off' !== $robotocondensed){
 				$font_family[] = 'Roboto Condensed:400,300,700,300italic,400italic,700italic';
-			}	
+			}
 			if('off' !== $opensans){
 				$font_family[] = 'Open Sans:300,400,600,700,800,300italic,400italic,600italic,700italic,800italic';
-			}					
+			}
 			$query_args = array(
 				'family'	=> urlencode(implode('|',$font_family)),
 			);
-			
+
 			$font_url = add_query_arg($query_args,'//fonts.googleapis.com/css');
 		}
-		
+
 	return $font_url;
 	}
 
@@ -152,7 +157,7 @@ function sktbefit_scripts() {
 	wp_enqueue_style( 'sktbefit-basic-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'sktbefit-editor-style', get_template_directory_uri()."/editor-style.css" );
 	wp_enqueue_style( 'sktbefit-nivoslider-style', get_template_directory_uri()."/css/nivo-slider.css" );
-	wp_enqueue_style( 'sktbefit-main-style', get_template_directory_uri()."/css/main.css" );		
+	wp_enqueue_style( 'sktbefit-main-style', get_template_directory_uri()."/css/main.css" );
 	wp_enqueue_style( 'sktbefit-base-style', get_template_directory_uri()."/css/style_base.css" );
 	wp_enqueue_script( 'sktbefit-nivo-script', get_template_directory_uri() . '/js/jquery.nivo.slider.js', array('jquery') );
 	wp_enqueue_script( 'sktbefit-custom-js', get_template_directory_uri() . '/js/custom.js' );
@@ -188,7 +193,7 @@ add_filter( 'wp_title', 'sktbefit_wp_title', 10, 2 );
 
 function sktbefit_ie_stylesheet(){
 	global $wp_styles;
-	
+
 	/** Load our IE-only stylesheet for all versions of IE.
 	*   <!--[if lt IE 9]> ... <![endif]-->
 	*
@@ -241,5 +246,5 @@ require get_template_directory() . '/inc/jetpack.php';
 function sktbefit_get_slug_by_id($id) {
 	$post_data = get_post($id, ARRAY_A);
 	$slug = $post_data['post_name'];
-	return $slug; 
+	return $slug;
 }
