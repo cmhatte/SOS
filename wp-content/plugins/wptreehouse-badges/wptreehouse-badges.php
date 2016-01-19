@@ -40,7 +40,8 @@
 			wp_die( 'You do not have permission to access this page.' );
 		}
 
-		echo '<p>Welcome to our plugin page!</p>';
+		// echo '<p>Welcome to our plugin page!</p>';
+		require( 'inc/options-page-wrapper.php');
 
 	}
 
