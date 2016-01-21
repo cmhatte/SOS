@@ -374,9 +374,9 @@ get_header(); ?>
 					font-size: 30px;
 
 				}
-					#my-stances h3 { color: #ef4b49;}
-					#polls h3 { color: #585caa;}
-					#trending h3 { color: #404041;}
+					#my-stances h3 { color: #ef4b49; text-align: center; }
+					#polls h3 { color: #585caa; text-align: center; }
+					#trending h3 { color: #404041; text-align: center; }
 			</style>
 			<div id="sidebar">
 				<style>
@@ -384,17 +384,231 @@ get_header(); ?>
 						border: 1px solid red;
 						<?php echo ($outlines==1) ? 'border: 1px solid red;' : ''; ?>
 					}
+						.cards-container {
+							padding-top: 10px;
+							height: 220px;
+						}
+							.card {
+								display: block;
+								width: 250px;
+								height: 180px;
+								border: 1px solid red;
+							}
+							#stance-card-1 {
+								background-color: red;
+								position: relative;
+								z-index: 300;
+								top: 20px;
+								left: 0px;
+							}
+							#stance-card-2 {
+								background-color: purple;
+								position: relative;
+								z-index: 200;
+								top: -170px;
+								left: 10px;
+							}
+							#stance-card-3 {
+								background-color: blue;
+								position: relative;
+								z-index: 100;
+								top: -360px;
+								left: 20px;
+							}
+							#poll-card-1 {
+								background-color: silver;
+								position: relative;
+								z-index: 300;
+								top: 20px;
+								left: 0px;
+							}
+							#poll-card-2 {
+								background-color: green;
+								position: relative;
+								z-index: 200;
+								top: -170px;
+								left: 10px;
+							}
+							#poll-card-3 {
+								background-color: yellow;
+								position: relative;
+								z-index: 100;
+								top: -360px;
+								left: 20px;
+							}
+					#top-trending {
+						margin-top: 30px;
+					}
+					#bottom-trending {
+						border-top: 8px solid #404041;
+						margin-top: 10px;
+						padding-top: 10px;
+					}
+					.trend {
+						display: block;
+						margin: 2px 0;
+					}
+					.trend-image {
+						display: block;
+						float: left;
+						width: 75px;
+					}
+					.img-circle {
+						width: 66px;
+						height: 66px;
+						border-radius: 50%;
+					}
+					.trend-right {
+						display: block;
+						width: 185px;
+						float: left;
+					}
+					.trend-title {
+						font-family: serif;
+						font-size: 14px;
+						padding: 6px 0;
+					}
+					.trend-bar-top, .trend-bar-bottom {
+						width:100%;
+						height:25px;
+						position:relative;
+						background: #FFF;
+					}
+					.trend-bar-top>span {
+						height:100%;
+						background-color: green;
+						display:block;
+						position: relative;
+						overflow: hidden;
+					}
+					.trend-bar-bottom>span {
+						height:100%;
+						background-color: red;
+						display:block;
+						position: relative;
+						overflow: hidden;
+					}
 				</style>
 				<aside id="my-stances">
 					<h3>My Stances</h3>
+					<div class="cards-container">
+						<div id="stance-card-1" class="card">
+							Card 1
+						</div>
+						<div id="stance-card-2" class="card">
+							Card 2
+						</div>
+						<div id="stance-card-3" class="card">
+							Card 3
+						</div>
+					</div>
 				</aside>
 
 				<aside id="polls">
 					<h3>Polls</h3>
+					<div class="cards-container">
+						<div id="poll-card-1" class="card">
+							Card 1
+						</div>
+						<div id="poll-card-2" class="card">
+							Card 2
+						</div>
+						<div id="poll-card-3" class="card">
+							Card 3
+						</div>
+					</div>
 				</aside>
 
 				<aside id="trending">
 					<h3>Trending</h3>
+					<div id="top-trending">
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">1. Donald Trump</div>
+								<div class="trend-bar-top"><span style="width:95%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">2. Planned Parenthood</div>
+								<div class="trend-bar-top"><span style="width:85%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">3. Iran Nuclean Deal</div>
+								<div class="trend-bar-top"><span style="width:75%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">4. Marco Rubio</div>
+								<div class="trend-bar-top"><span style="width:65%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">5. Barack Obama</div>
+								<div class="trend-bar-top"><span style="width:45%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div id="bottom-trending">
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">1. Hillary Clinton</div>
+								<div class="trend-bar-bottom"><span style="width:95%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">2. Gun Control</div>
+								<div class="trend-bar-bottom"><span style="width:95%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">3. Immigration</div>
+								<div class="trend-bar-bottom"><span style="width:95%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">4. Bernie Sanders</div>
+								<div class="trend-bar-bottom"><span style="width:95%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="trend">
+							<div class="trend-image"><img src="wp-content/themes/skt-befit-child/images/politicians/rubio-marco.jpg" width="66" height="66" class="img-circle"></div>
+							<div class="trend-right">
+								<div class="trend-title">5. Rand Paul</div>
+								<div class="trend-bar-bottom"><span style="width:95%;"></span></div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
 				</aside>
 			</div><!--sidebar-->
 		</div><!--sidebar-right-->
